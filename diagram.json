@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "author": "Copilot",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": { "env": "esp32doit-devkit-v1" }
+    },
+    {
+      "type": "wokwi-neopixel-matrix",
+      "id": "matrix",
+      "top": -98,
+      "left": 154.96,
+      "attrs": { "rows": "19", "cols": "19" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:5", "matrix:DIN", "green", [ "h0" ] ],
+    [ "esp:GND", "matrix:GND", "black", [ "h0" ] ],
+    [ "esp:5V", "matrix:VCC", "red", [ "h0" ] ]
+  ]
+}
