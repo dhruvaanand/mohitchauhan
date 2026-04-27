@@ -1,4 +1,6 @@
 [wokwi]
+; This section is specific to Wokwi, an online simulator for ESP32 boards.
+; It configures the firmware and ELF file paths for Wokwi compatibility.
 version = 1
 firmware = '.pio/build/esp32doit-devkit-v1/firmware.bin'
 elf = '.pio/build/esp32doit-devkit-v1/firmware.elf'
